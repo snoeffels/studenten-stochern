@@ -1,3 +1,76 @@
+a {
+  color: #F4407E !important;
+  text-decoration: underline;
+}
+
+.u-text-custom-color-1 .u-svg-link {
+  fill: #61cbff;
+}
+
+.u-custom-color-1 {
+  background-color: #61cbff;
+}
+  
+  /* The Modal (background) */
+  .calendar-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .calendar-modal-content {
+    display: flex;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px 0px 20px 20px;
+    border: 1px solid #888;
+    
+    width: 98vw;
+    height: 98vh;
+    /*
+    max-height: 80vh;*/
+  }
+
+  .calendar-modal-content iframe{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* The Close Button */
+  .calendar-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .calendar-modal-close:hover,
+  .calendar-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .button-unstyled {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    margin-top: -15px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
 .button { 
   border: none;
   color: white;
