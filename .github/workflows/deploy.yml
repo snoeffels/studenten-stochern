@@ -1,0 +1,35 @@
+name: SFTP Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install LFTP
+        run: sudo apt-get install -y lftp
+
+      - name: Add SSH host key to known hosts
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H $SFTP_HOST >> ~/.ssh/known_hosts
+
+      - name: Empty remote folder and deploy via SFTP
+        env:
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+        run: |
+          lftp -u $SFTP_USERNAME,$SFTP_PASSWORD sftp://$SFTP_HOST <<-EOF
+            mirror --reverse --delete --verbose --exclude ".env" --exclude "sammelfahrten" . .
+            bye
+          EOF
