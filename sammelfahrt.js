@@ -31,17 +31,23 @@ async function fetchAndRenderUpcomingSammelfahrt() {
                 <div class="card-body">
                     <div class="d-flex">
                         <h5 class="card-title">Öffentliche Stocherkahnfahrt</h5>
-                        <span style="color:${color}">${state}</span>
                     </div>
-                    <p class="" style="font-size: 0.9rem">
+                    <p style="font-size: 1.1rem; margin: 0 0">
                         <i class="fa-regular fa-calendar" style="position: relative; bottom: 1px; margin-right: 5px"></i>
                         <span>${new Date(data.scheduledFor).toLocaleString()}</span>
                     </p>
-                    <p class="">
+                    <p style="font-size: 0.9rem; margin: 0 0">
                         Teilnehmer: ${data.totalMembers}
                         <span style="margin-left: 15px">Freie Plätze: ${data.seatsLeft}</span>
                     </p>
+                    <p style="font-size: 0.9rem; margin: 0 0">
+                        Status: <span style="color:${color}">${state}</span>
+                    </p>
                 </div>
+                
+                <p style="margin: 10px 0">
+                    Bei einer öffentlichen Stocherkahnfahrt teilt ihr Euch einen Stocherkahn mit anderen Kunden und bekommt eine Stadtführung von einem von uns!
+                </p>
             `;
 
             // Append the card to the container
