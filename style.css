@@ -14,6 +14,20 @@ a {
 #sammelfahrten-container {
   margin: 15px !important;
 }
+
+#sammelfahrt-desktop-text {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+#sammelfahrt-mobile-text {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
   
 /* The Modal (background) */
 .calendar-modal {

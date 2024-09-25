@@ -111,11 +111,42 @@
 
         <!-- Integration Sammelfahrten -->
         <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-expanded-width-md u-grey-80 u-group u-group-2"
-             style="display: block; padding: 15px; min-height: unset"
+             style="padding: 15px; min-height: unset"
         >
-            <div id="sammelfahrten-container"></div>
+            <div style="min-width: 300px; margin-right: 50px">
+                <div id="sammelfahrten-container"></div>
 
-            <button class="button button5" style="font-weight: bold; height: 55px">Jetzt Teilnehmen</button>
+                <button class="button button5" style="font-weight: bold; height: 55px">Jetzt Teilnehmen</button>
+            </div>
+            <div id="sammelfahrt-desktop-text">
+                <h5>Dir passt der Termin nicht?</h5>
+                <p>
+                    Kein Problem, es gibt noch viele weitere Fahrten an denen Du teilnehmen kannst.
+                    Schau Dir einfach die <a href="">weiteren Termine</a> an.
+                </p>
+                <p>
+                    Solltest Du dort nicht fündig werden kannst Du auch eine <a href="">private
+                    Fahrt</a> zu einem Termin Deiner Wahl buchen.
+                </p>
+            </div>
+        </div>
+
+        <!-- Integration Sammelfahrten -->
+        <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-expanded-width-md u-grey-80 u-group u-group-2"
+             style="padding: 15px; min-height: unset"
+             id="sammelfahrt-mobile-text"
+        >
+            <div>
+                <h5>Dir passt der Termin nicht?</h5>
+                <p>
+                    Kein Problem, es gibt noch viele weitere Fahrten an denen Du teilnehmen kannst.
+                    Schau Dir einfach die <a href="">weiteren Termine</a> an.
+                </p>
+                <p>
+                    Solltest Du dort nicht fündig werden kannst Du auch eine <a href="">private
+                    Fahrt</a> zu einem Termin Deiner Wahl buchen.
+                </p>
+            </div>
         </div>
 
         <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-expanded-width-md u-grey-80 u-group u-group-2">
@@ -128,19 +159,19 @@
                         class="fa-brands fa-facebook"></i></a>
                 <h1 style="font-size:36px" class="u-align-left u-text u-text-default u-text-2" spellcheck="false">Unsere
                     privaten Stocherkahnfahrten</h1>
-                    <p class="u-align-justify u-text u-text-4" spellcheck="false">Wir bieten Euch das geführte Erlebnis
-                        des Stocherkahnfahrens auf dem Neckar zu einem guten Preis an. Die einzigartige
-                        Freizeitaktivität, die untrennbar mit Tübingen verbunden ist, ähnlich wie der Hölderlinturm an
-                        der Uferpromenade. Früher war das Stocherkahnfahren nur für diejenigen möglich, die eigene Kähne
-                        besaßen. Mit uns hat jeder die Möglichkeit eine Tour mit einem erfahrenen Fahrer auf unserem
-                        schönen <a href="https://de.wikipedia.org/wiki/T%C3%BCbinger_Stocherkahn">Stocherkahn</a> zu
-                        genießen. Wer Tübingen also von seiner eindrucksvollsten Seite sehen möchte, sollte eine
-                        Stocherkahnfahrt auf dem Neckar bei uns buchen. Ein wirklich unvergessliches Highlight! Wir
-                        freuen uns auf Euch und danken für die Unterstützung der Tübinger Studenten. <a
-                                href="#ueberuns">Mehr über uns...</a></p>
-                    <button class="button button5 button6" style="font-weight: bold;margin-top: 15px;"
-                            onclick="openModal()">JETZT FAHRT BUCHEN
-                    </button>
+                <p class="u-align-justify u-text u-text-4" spellcheck="false">Wir bieten Euch das geführte Erlebnis
+                    des Stocherkahnfahrens auf dem Neckar zu einem guten Preis an. Die einzigartige
+                    Freizeitaktivität, die untrennbar mit Tübingen verbunden ist, ähnlich wie der Hölderlinturm an
+                    der Uferpromenade. Früher war das Stocherkahnfahren nur für diejenigen möglich, die eigene Kähne
+                    besaßen. Mit uns hat jeder die Möglichkeit eine Tour mit einem erfahrenen Fahrer auf unserem
+                    schönen <a href="https://de.wikipedia.org/wiki/T%C3%BCbinger_Stocherkahn">Stocherkahn</a> zu
+                    genießen. Wer Tübingen also von seiner eindrucksvollsten Seite sehen möchte, sollte eine
+                    Stocherkahnfahrt auf dem Neckar bei uns buchen. Ein wirklich unvergessliches Highlight! Wir
+                    freuen uns auf Euch und danken für die Unterstützung der Tübinger Studenten. <a
+                            href="#ueberuns">Mehr über uns...</a></p>
+                <button class="button button5 button6" style="font-weight: bold;margin-top: 15px;"
+                        onclick="openModal()">JETZT FAHRT BUCHEN
+                </button>
             </div>
         </div>
 
@@ -155,30 +186,30 @@
                 <script src="//widget.simplybook.it/v2/widget/widget.js"></script>
                 <script>
                     var widget = new SimplybookWidget({
-                    "widget_type": "iframe",
-                    "url": "https:\/\/studentenstochern.simplybook.it",
-                    "theme": "space",
-                    "theme_settings": {
-                        "timeline_hide_unavailable": "1",
-                        "sb_base_color": "#ff5582",
-                        "hide_past_days": "0",
-                        "timeline_show_end_time": "0",
-                        "timeline_modern_display": "as_slots",
-                        "display_item_mode": "list",
-                        "sb_review_image": "",
-                        "dark_font_color": "#474747",
-                        "light_font_color": "#ffffff",
-                        "sb_company_label_color": "#ffffff",
-                        "hide_img_mode": "0",
-                        "show_sidebar": "1",
-                        "sb_busy": "#ff5582",
-                        "sb_available": "#61cbff"
-                    },
-                    "timeline": "modern",
-                    "datepicker": "top_calendar",
-                    "is_rtl": false,
-                    "app_config": {"clear_session": 0, "allow_switch_to_ada": 0, "predefined": []}
-                });</script>
+                        "widget_type": "iframe",
+                        "url": "https:\/\/studentenstochern.simplybook.it",
+                        "theme": "space",
+                        "theme_settings": {
+                            "timeline_hide_unavailable": "1",
+                            "sb_base_color": "#ff5582",
+                            "hide_past_days": "0",
+                            "timeline_show_end_time": "0",
+                            "timeline_modern_display": "as_slots",
+                            "display_item_mode": "list",
+                            "sb_review_image": "",
+                            "dark_font_color": "#474747",
+                            "light_font_color": "#ffffff",
+                            "sb_company_label_color": "#ffffff",
+                            "hide_img_mode": "0",
+                            "show_sidebar": "1",
+                            "sb_busy": "#ff5582",
+                            "sb_available": "#61cbff"
+                        },
+                        "timeline": "modern",
+                        "datepicker": "top_calendar",
+                        "is_rtl": false,
+                        "app_config": {"clear_session": 0, "allow_switch_to_ada": 0, "predefined": []}
+                    });</script>
             </div>
 
         </div>
