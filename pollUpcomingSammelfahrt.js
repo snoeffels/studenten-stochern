@@ -15,8 +15,6 @@ async function fetchAndRenderUpcomingSammelfahrt() {
             // Build the card using data from the API
             const card = document.createElement('div');
             card.classList.add('card');
-            card.style.marginTop = '15px';
-            card.style.maxWidth = '300px';
 
             let state = 'In Planung';
             let color = '#E39A3B'; // Default color
@@ -28,10 +26,11 @@ async function fetchAndRenderUpcomingSammelfahrt() {
                 state = 'Bestätigt';
             }
 
+
             card.innerHTML = `
                 <div class="card-body">
                     <div class="d-flex">
-                        <h5 class="card-title" style="margin-right: 20px">Die nächste Sammelfahrt</h5>
+                        <h5 class="card-title">Öffentliche Stocherkahnfahrt</h5>
                         <span style="color:${color}">${state}</span>
                     </div>
                     <p class="" style="font-size: 0.9rem">
