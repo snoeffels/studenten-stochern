@@ -371,8 +371,19 @@
 
     document.getElementsByTagName("iframe")[0].scrolling = "yes";
 
+    // Remove scrollbar when modal opens
+    document.getElementById('sammelfahrten-modal').addEventListener('show.bs.modal', function () {
+        document.documentElement.style.overflow = 'hidden';
+    });
+
+    // Restore scrollbar when modal closes
+    document.getElementById('sammelfahrten-modal').addEventListener('hidden.bs.modal', function () {
+        document.documentElement.style.overflow = 'auto';
+    });
+
+
     // Get the modal
-    var modal = document.getElementById("calendar-modal");
+    const modal = document.getElementById("calendar-modal");
 
     function openModal() {
         modal.style.display = "block";
