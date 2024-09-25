@@ -6,48 +6,52 @@ async function fetchAndRenderUpcomingSammelfahrt() {
 
         const container = document.getElementById('sammelfahrten-container');
 
-        console.log(container);
+        // Build the card using data from the API
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.style.border = 'none';
+        card.style.backgroundColor = 'transparent';
+        card.style.color = 'white';
+        card.style.margin = '0';
+        card.style.padding = '0';
 
-        // Check if there's an error in the response
-        if (data.error) {
-            container.innerHTML = `<div class="alert alert-danger">Error: ${data.error}</div>`;
-        } else {
-            // Build the card using data from the API
-            const card = document.createElement('div');
-            card.classList.add('card');
-            card.style.border='none';
-            card.style.backgroundColor='transparent';
-            card.style.color='white';
-            card.style.margin='0';
-            card.style.padding='0';
+        let state = 'In Planung';
+        let color = '#E39A3B'; // Default color
+        if (data.status === -1) {
+            color = '#B62639'; // Abgesagt
+            state = 'Abgesagt';
+        } else if (data.status === 1) {
+            color = '#98B36B'; // Bestätigt
+            state = 'Bestätigt';
+        }
 
-            let state = 'In Planung';
-            let color = '#E39A3B'; // Default color
-            if (data.status === -1) {
-                color = '#B62639'; // Abgesagt
-                state = 'Abgesagt';
-            } else if (data.status === 1) {
-                color = '#98B36B'; // Bestätigt
-                state = 'Bestätigt';
-            }
+        console.log('here');
 
+        let test = 5;
 
-            card.innerHTML = `
+        card.innerHTML = `
                 <div class="card-body m-0 p-0">
                     <div class="d-flex">
                         <h5 class="card-title" style="margin-bottom: 20px">Öffentliche Stocherkahnfahrt</h5>
                     </div>
-                    <p style="font-size: 1.1rem; margin: 0 0">
-                        <i class="fa-regular fa-calendar" style="position: relative; bottom: 1px; margin-right: 5px"></i>
-                        <span>${new Date(data.scheduledFor).toLocaleString()}</span>
-                    </p>
-                    <p style="font-size: 0.9rem; margin: 0 0">
-                        Teilnehmer: ${data.totalMembers}
-                        <span style="margin-left: 15px">Freie Plätze: ${data.seatsLeft}</span>
-                    </p>
-                    <p style="font-size: 0.9rem; margin: 0 0">
-                        Status: <span style="color:${color}">${state}</span>
-                    </p>
+                    ` + (!data.error ?
+                    `
+                        <p style="font-size: 1.1rem; margin: 0 0">
+                            <i class="fa-regular fa-calendar" style="position: relative; bottom: 1px; margin-right: 5px"></i>
+                            <span>${new Date(data.scheduledFor).toLocaleString()}</span>
+                        </p>
+                        <p style="font-size: 0.9rem; margin: 0 0">
+                            Teilnehmer: ${data.totalMembers}
+                            <span style="margin-left: 15px">Freie Plätze: ${data.seatsLeft}</span>
+                        </p>
+                        <p style="font-size: 0.9rem; margin: 0 0">
+                            Status: <span style="color:${color}">${state}</span>
+                        </p>
+                    ` :
+                    `
+                        <p>Keine öffentlichen Fahrten geplant</p>
+                    `) +
+            `
                 </div>
                 
                 <p style="margin: 23px 0 10px 0; font-size: 1rem">
@@ -55,9 +59,8 @@ async function fetchAndRenderUpcomingSammelfahrt() {
                 </p>
             `;
 
-            // Append the card to the container
-            container.appendChild(card);
-        }
+        // Append the card to the container
+        container.appendChild(card);
     } catch (error) {
         console.error('Error fetching Sammelfahrten:', error);
     }
