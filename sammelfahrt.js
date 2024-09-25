@@ -35,10 +35,19 @@ async function fetchAndRenderUpcomingSammelfahrt() {
                         <h5 class="card-title" style="margin-bottom: 20px">Öffentliche Stocherkahnfahrt</h5>
                     </div>
                     ` + (!data.error ?
-                    `
+                `
                         <p style="font-size: 1.1rem; margin: 0 0">
                             <i class="fa-regular fa-calendar" style="position: relative; bottom: 1px; margin-right: 5px"></i>
-                            <span>${new Date(data.scheduledFor).toLocaleString()}</span>
+                            <span>${
+                                new Date(data.scheduledFor).toLocaleString("de", {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric',
+                                    hour: '2-digit',
+                                    minute: '2-digit',
+                                    hour12: false
+                                })
+                            }</span>
                         </p>
                         <p style="font-size: 0.9rem; margin: 0 0">
                             Teilnehmer: ${data.totalMembers}
@@ -48,7 +57,7 @@ async function fetchAndRenderUpcomingSammelfahrt() {
                             Status: <span style="color:${color}">${state}</span>
                         </p>
                     ` :
-                    `
+                `
                         <p>Keine öffentlichen Fahrten geplant</p>
                     `) +
             `
