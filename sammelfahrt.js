@@ -15,6 +15,11 @@ async function fetchAndRenderUpcomingSammelfahrt() {
             // Build the card using data from the API
             const card = document.createElement('div');
             card.classList.add('card');
+            card.style.border='none';
+            card.style.backgroundColor='transparent';
+            card.style.color='white';
+            card.style.margin='0';
+            card.style.padding='0';
 
             let state = 'In Planung';
             let color = '#E39A3B'; // Default color
@@ -28,9 +33,9 @@ async function fetchAndRenderUpcomingSammelfahrt() {
 
 
             card.innerHTML = `
-                <div class="card-body">
+                <div class="card-body m-0 p-0">
                     <div class="d-flex">
-                        <h5 class="card-title">Öffentliche Stocherkahnfahrt</h5>
+                        <h5 class="card-title" style="margin-bottom: 20px">Öffentliche Stocherkahnfahrt</h5>
                     </div>
                     <p style="font-size: 1.1rem; margin: 0 0">
                         <i class="fa-regular fa-calendar" style="position: relative; bottom: 1px; margin-right: 5px"></i>
