@@ -45,8 +45,8 @@ async function fetchAndRenderUpcomingSammelfahrt() {
                     </p>
                 </div>
                 
-                <p style="margin: 10px 0">
-                    Bei einer öffentlichen Stocherkahnfahrt teilt ihr Euch einen Stocherkahn mit anderen Kunden und bekommt eine Stadtführung von einem von uns!
+                <p style="margin: 23px 0 10px 0; font-size: 1rem">
+                    Bei einer öffentlichen Stocherkahnfahrt teilt ihr Euch einen Stocherkahn mit anderen Teilnehmern und bekommt eine Stadtführung von einem von uns!
                 </p>
             `;
 
