@@ -600,6 +600,13 @@
     if (!!params.booking) {
         openModal();
     }
+
+    if (!!params.sammelfahrten) {
+        const sammelfahrtenModal = new bootstrap.Modal(document.getElementById('sammelfahrten-modal'), {
+            keyboard: false
+        });
+        sammelfahrtenModal.show();
+    }
 </script>
 
 </body>

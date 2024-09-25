@@ -25,10 +25,6 @@ async function fetchAndRenderUpcomingSammelfahrt() {
             state = 'Bestätigt';
         }
 
-        console.log('here');
-
-        let test = 5;
-
         card.innerHTML = `
                 <div class="card-body m-0 p-0">
                     <div class="d-flex">
