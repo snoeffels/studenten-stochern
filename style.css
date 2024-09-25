@@ -1588,3 +1588,21 @@ a {
     min-height: 500px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  transition: all ease-in-out 0.33s;
+  background: rgba(136, 136, 136, 0.8);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
